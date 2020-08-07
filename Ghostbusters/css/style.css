@@ -1,0 +1,862 @@
+* {
+		padding: 0;
+		margin: 0;
+		border: 0;
+}
+
+*,
+*:before,
+*:after {
+		box-sizing: border-box;
+}
+
+:focus,
+:active {
+		outline: none;
+}
+
+a:focus,
+a:active {
+		outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+		display: block;
+}
+
+html,
+body {
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 14px;
+		-ms-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+		font-family: inherit;
+}
+
+input::-ms-clear {
+		display: none;
+}
+
+button {
+		cursor: pointer;
+}
+
+button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+}
+
+a,
+a:visited {
+		text-decoration: none;
+}
+
+a:hover {
+		text-decoration: none;
+}
+
+ul li {
+		list-style: none;
+}
+
+img {
+		vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+		font-size: inherit;
+		font-weight: inherit;
+}
+
+* {
+		font-family: "Roboto", sans-serif;
+}
+
+.header {
+		display: flex;
+		align-items: center;
+		height: 104px;
+		padding: 0px 0px 0px 34px;
+		border-bottom: 1px solid #D4D4D4;
+}
+
+.no-scroll {
+		overflow: hidden;
+}
+
+.m-menu {
+		height: 100%;
+		align-items: center;
+		display: flex;
+		flex-grow: 1;
+}
+
+.header-logo-link {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.header-logo-link:after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 1px;
+		background: #d4d4d4;
+		margin: 0px 0px 0px 34px;
+}
+
+.header-form {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 0px 34px;
+}
+
+.form-button {
+		margin: 0px 20px 0px 0px;
+		width: 16px;
+		height: 16px;
+		background: url(../img/search-icon.svg) center no-repeat;
+}
+
+.search-input {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #A5A5A5;
+}
+
+.navigation {
+		margin: 0px 44px 0px auto;
+}
+
+.navigation-link {
+		margin: 0px 18px 0px 0px;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #363636;
+}
+.navigation-link:hover {
+		color: #5671F6;
+}
+
+.button-group {
+		display: flex;
+		height: 100%;
+		font-size: 0;
+}
+
+.button {
+		height: 100%;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #5671F6;
+		background: #fff;
+}
+.button:active {
+		background: #5671F6;
+		color: #FFFFFF;
+}
+
+.mobile-buttons {
+		display: none;
+}
+
+.m-menu-button,
+.m-search-button {
+		padding: 5px 0px 5px 0px;
+		margin: 0px 0px 0px 20px;
+		border: none;
+		background: #fff;
+}
+
+.menu-line {
+		display: block;
+		height: 2px;
+		width: 16px;
+		background: #000;
+		margin: 2px 0px 2px 0px;
+		border-radius: 40px;
+}
+
+.sign-up {
+		padding: 0px 34px 0px 34px;
+		border-left: 1px solid #D4D4D4;
+}
+
+.login {
+		padding: 0px 50px 0px 50px;
+		border-left: 1px solid #D4D4D4;
+}
+
+.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		background-color: rgba(0, 0, 0, 0.8);
+		animation-name: modalopen;
+		animation-duration: 1s;
+}
+
+.modal-wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 10% auto;
+		width: 400px;
+		height: 300px;
+		background: #fff;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+		animation-name: wrapperopen;
+		animation-duration: 1s;
+}
+
+.closed-modal {
+		margin: 20px 20px 0px 0px;
+		position: absolute;
+		right: 0;
+		top: 0;
+}
+
+.modal-header {
+		padding: 20px 0px 20px 0px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		border-bottom: 1px solid #A5A5A5;
+}
+
+.sign-in {
+		font-size: 16px;
+		font-weight: bold;
+}
+
+.modal-section {
+		width: 100%;
+		height: 100%;
+}
+
+.modal-form {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+
+.modal-input {
+		display: block;
+		border: 1px solid #000;
+		width: 50%;
+		height: 20%;
+		border-radius: 5px;
+		box-shadow: inset 3px 4px 5px #000;
+		padding: 0px 0px 0px 20px;
+}
+
+.email {
+		margin: 0px 0px 10px 0px;
+}
+
+.password {
+		display: block;
+}
+
+.modal-button {
+		margin: 20px 0px 0px 0px;
+		padding: 15px 60px 15px 60px;
+}
+
+.modal-footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 20px 0px 20px 0px;
+		border-top: 1px solid #A5A5A5;
+}
+
+.forgot-password {
+		font-size: 16px;
+		color: #7287c3;
+}
+
+@keyframes modalopen {
+		0% {
+				left: -100%;
+		}
+		50% {
+				right: -200%;
+		}
+		100% {
+				right: 0;
+		}
+}
+.container {
+		max-width: 1130px;
+		margin: auto;
+}
+
+.film {
+		padding: 80px 0px 80px 0px;
+		border: 1px solid #D4D4D4;
+}
+
+.film-wrapper {
+		display: flex;
+}
+
+.film-trailer {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 60px 0px 0px;
+}
+
+.poster {
+		border-radius: 5px 5px 0 0;
+		width: 358px;
+}
+
+.trailer-button {
+		background: #fff;
+		border: 1px solid #D4D4D4;
+		border-radius: 0px 0px 5px 5px;
+		padding: 25px 0px 25px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+
+.play-icon {
+		margin: 0px 14px 0px 0px;
+}
+
+.film-title {
+		margin: 0px 0px 16px 0px;
+		font-weight: 900;
+		font-size: 36px;
+		line-height: 42px;
+		color: #363636;
+}
+
+.film-subtitle {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #A5A5A5;
+}
+
+.film-descr {
+		margin: 32px 0px 0px 0px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 150%;
+		max-width: 514px;
+}
+
+.about-film {
+		display: flex;
+		margin: 50px 0px 0px 0px;
+}
+
+.left-side {
+		margin: 0px 40px 0px 0px;
+}
+
+.about-text {
+		display: block;
+		font-size: 16px;
+		line-height: 19px;
+		margin: 0px 0px 16px 0px;
+}
+
+.about-text-bold {
+		display: inline-block;
+		width: 100px;
+		vertical-align: top;
+}
+
+.film-rating {
+		display: flex;
+		align-items: center;
+		margin: 50px 0px 0px 0px;
+}
+
+.film-rating-counter {
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #5671F6;
+		border-radius: 10px;
+		margin: 0px 28px 0px 0px;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 33px;
+		color: #5671F6;
+}
+
+.film-rating-title {
+		margin: 0px 0px 12px 0px;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		color: #363636;
+}
+
+.film-ratin-text {
+		display: block;
+		margin: 0px 0px 7px 0px;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+}
+
+.cast {
+		padding: 70px 0px 100px 0px;
+}
+
+.tabs {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 60px 0px;
+}
+
+.section-title {
+		font-size: 24px;
+		line-height: 28px;
+		color: #A5A5A5;
+		margin: 0px 30px 0px 0px;
+}
+
+.tabs-content {
+		display: none;
+		align-items: center;
+		flex-wrap: wrap;
+		visibility: hidden;
+}
+
+.tabs-content.visible {
+		display: flex;
+		visibility: visible;
+}
+
+.card {
+		display: flex;
+		align-items: center;
+		flex-basis: 25%;
+		margin: 0px 0px 35px 0px;
+}
+
+.card-image {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+		margin: 0px 20px 0px 0px;
+}
+
+.name {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 19px;
+		color: #5671F6;
+		margin: 0px 0px 6px 0px;
+}
+
+.en-name {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+		color: #A5A5A5;
+}
+
+.news {
+		background: #F3F3F3;
+		padding: 70px 0px 100px 0px;
+}
+
+.section-news-title {
+		font-weight: 900;
+		font-size: 24px;
+		line-height: 28px;
+		color: #000000;
+}
+
+.tab {
+		cursor: pointer;
+}
+
+.tab.active {
+		color: #363636;
+}
+
+.news-cards {
+		margin: 65px 0px 0px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+}
+
+.news-card {
+		flex-basis: 23%;
+		background: #ffffff;
+		padding: 30px;
+		border-radius: 5px;
+}
+
+.news-title {
+		font-weight: 900;
+		font-size: 14px;
+		line-height: 16px;
+		color: #000000;
+		margin-top: 14px;
+}
+
+.date {
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 16px;
+		color: #000000;
+}
+
+.button-next {
+		display: none;
+		background: transparent;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 99;
+}
+
+@media (max-width: 1200px) {
+		.container {
+				max-width: 960px;
+		}
+
+		.card-image {
+				width: 70px;
+				height: 70px;
+		}
+
+		.navigation-link {
+				margin-right: 10px;
+				font-size: 16px;
+		}
+
+		.header {
+				height: 90px;
+		}
+
+		.search-input {
+				margin-left: 15px;
+		}
+
+		.sign-up {
+				padding-left: 20px;
+				padding-right: 20px;
+		}
+
+		.header-logo-link:after {
+				margin: 0px 0px 0px 15px;
+		}
+}
+@media (max-width: 991px) {
+		.container {
+				max-width: 760px;
+		}
+
+		.header-form {
+				margin: 0px auto 0px 10px;
+		}
+
+		.navigation {
+				display: none;
+		}
+
+		.search-input {
+				margin-right: auto;
+		}
+
+		.film-title {
+				font-size: 23px;
+				line-height: 1.4;
+		}
+
+		.film-subtitle {
+				font-size: 16px;
+		}
+
+		.about-film {
+				margin: 25px 0px 0px 0px;
+		}
+
+		.film-rating {
+				margin: 25px 0px 0px 0px;
+		}
+
+		.about-text-bold {
+				display: block;
+				margin: 0px 0px 10px 0px;
+		}
+
+		.card-image {
+				width: 100px;
+				height: 100px;
+		}
+
+		.card {
+				flex-basis: 50%;
+		}
+
+		.news-card {
+				flex-basis: 48%;
+				margin: 0px 0px 20px 0px;
+		}
+}
+@media (max-width: 790px) {
+		.container {
+				max-width: 560px;
+		}
+
+		.header {
+				min-width: 80px;
+		}
+
+		.header-logo-link:after {
+				display: none;
+		}
+
+		.film {
+				padding: 50px 0px 60px 0px;
+		}
+
+		.film-wrapper {
+				flex-wrap: wrap;
+		}
+
+		.film-text {
+				order: -1;
+				margin: 0px 0px 30px 0px;
+		}
+
+		.cast {
+				padding: 50px 0px 70px 0px;
+		}
+
+		.news {
+				padding: 50px 0px 70px 0px;
+		}
+
+		.header {
+				padding-right: 2.5%;
+				padding-left: 2.5%;
+		}
+
+		.mobile-buttons {
+				display: flex;
+				align-items: center;
+				margin-left: auto;
+		}
+
+		.m-menu {
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				position: fixed;
+				top: 68px;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				height: calc(100%-68px);
+				background: #5671F6;
+				overflow: hidden;
+		}
+
+		.m-menu.active {
+				display: flex;
+				overflow: hidden;
+		}
+
+		.m-menu-button.rotate {
+				position: relative;
+		}
+
+		.menu-line.rotate {
+				position: absolute;
+				transition: ease 0.5s all;
+		}
+
+		.menu-line.rotate:nth-child(1) {
+				transform: rotate(-45deg);
+				top: 0;
+		}
+
+		.menu-line.rotate:nth-child(2) {
+				display: none;
+		}
+
+		.menu-line.rotate:nth-child(3) {
+				transform: rotate(45deg);
+				top: 0;
+		}
+
+		.register {
+				background-color: transparent;
+				color: #FFFFFF;
+				border: none;
+				margin-bottom: 30px;
+		}
+
+		.navigation {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+		}
+
+		.navigation-link {
+				color: #fff;
+				margin-bottom: 18px;
+				margin-right: 0;
+		}
+		.navigation-link:last-child {
+				margin-bottom: 0;
+		}
+
+		.button-group {
+				height: auto;
+				flex-direction: column;
+		}
+
+		.form-button {
+				display: none;
+		}
+
+		.header-form {
+				margin: 0;
+		}
+
+		.search-input {
+				padding: 0px 40px 0px 40px;
+				margin: 0;
+				width: 260px;
+				height: 50px;
+				border-radius: 5px;
+				border: none;
+		}
+
+		.news-card {
+				max-width: 90%;
+		}
+
+		.button-next {
+				display: block;
+		}
+}
+@media (max-width: 576px) {
+		.container {
+				width: 95%;
+		}
+
+		.film-title {
+				font-size: 20px;
+				line-height: 23px;
+				margin-bottom: 12px;
+		}
+
+		.film-subtitle {
+				font-size: 14px;
+				line-height: 16px;
+				margin-bottom: 26px;
+		}
+
+		.film-descr {
+				font-size: 14px;
+				line-height: 150%;
+				margin-bottom: 40px;
+		}
+
+		.about-film {
+				flex-wrap: wrap;
+				flex-direction: column;
+				margin-bottom: 40px;
+		}
+
+		.about-text-bold {
+				display: inline-block;
+		}
+
+		.film-trailer,
+.poster {
+				width: 100%;
+		}
+
+		.film-trailer {
+				margin-bottom: 30px;
+		}
+
+		.film-text {
+				order: 1;
+				margin-bottom: 0;
+		}
+
+		.tabs {
+				margin-bottom: 40px;
+		}
+
+		.section-title {
+				font-size: 18px;
+				line-height: 21px;
+		}
+
+		.tabs-content {
+				flex-basis: 100%;
+		}
+
+		.card {
+				margin-left: 30px;
+				margin-bottom: 20px;
+		}
+
+		.card-image {
+				width: 60px;
+				height: 60px;
+		}
+
+		.news-card {
+				flex-basis: 100%;
+		}
+}
+/*# sourceMappingURL=style.css.map */
